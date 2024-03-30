@@ -5,9 +5,9 @@ class FeliuStarterTheme {
     private static string $theme_version;
 
     public function __construct(
-        private bool $developing = false,
+        private readonly bool $developing = false,
     ) {
-        self::$theme_version = wp_get_theme()->version; // Reading theme version from style.css
+        self::$theme_version = wp_get_theme()->version ?? '1.0'; // Reading theme version from style.css
         add_action( 'wp_enqueue_scripts', fn() => FeliuStarterTheme::feliu_enqueue_scripts(
 			$this->developing,
 	        self::$theme_version
