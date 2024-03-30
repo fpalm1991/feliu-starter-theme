@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-    <main>
-        MAIN
-    </main>
+<main>
+    MAIN
+</main>
 
 <?php get_footer(); ?>
