@@ -10,7 +10,11 @@
 <body>
 
     <header>
-        <nav>
-            NAVIGATION
+        <nav class="navbar navbar-expand-lg">
+	        <?php
+                wp_nav_menu([
+                    'theme_location' => 'main_menu'
+                ]);
+	        ?>
         </nav>
     </header>
