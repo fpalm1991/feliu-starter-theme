@@ -1,22 +1,43 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 680px) {
+  .teaser-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .teaser {
+    display: flex;
+  }
+}
+.nav.main .menu {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: #8ccbef;
+  padding: 1.4rem 4.2rem;
+}
+.nav.main .menu .menu-item a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav.main .menu .menu-item a:hover {
+  color: white;
+}
+.nav.sub {
+  height: 2.2rem;
+  background-color: #e8e8e8;
 }
 
 body {
-    font-family: Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-size: 1.2em;
 }
 
-.menu {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-}
-
-.menu .menu-item a {
-    text-decoration: none;
-    color: inherit;
-}
+/*# sourceMappingURL=style.css.map */

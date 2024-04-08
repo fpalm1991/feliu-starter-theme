@@ -1,0 +1,27 @@
+.nav {
+  &.main {
+    .menu {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      background-color: #8ccbef;
+      padding: 1.4rem 4.2rem;
+    }
+
+    .menu .menu-item a {
+      text-decoration: none;
+      color: inherit;
+
+
+    &:hover {
+        color: white;
+      }
+    }
+
+  }
+
+  &.sub {
+    height: 2.2rem;
+    background-color: #e8e8e8;
+  }
+}

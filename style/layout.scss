@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 680px) {
+  .teaser-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .teaser {
+    display: flex;
+  }
+}
+
+

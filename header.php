@@ -10,7 +10,8 @@
 <body>
 
     <header>
-        <nav class="navbar navbar-expand-lg">
+        <nav class="nav sub"></nav>
+        <nav class="nav main">
 	        <?php
                 wp_nav_menu([
                     'theme_location' => 'main_menu'
