@@ -1,27 +1,38 @@
-.nav {
-  &.main {
-    .menu {
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-      background-color: #8ccbef;
-      padding: 1.4rem 4.2rem;
-    }
+@use "variables";
 
-    .menu .menu-item a {
+.navbar {
+
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .menu-item > a {
       text-decoration: none;
-      color: inherit;
-
-
-    &:hover {
-        color: white;
-      }
     }
-
   }
 
-  &.sub {
-    height: 2.2rem;
-    background-color: #e8e8e8;
+}
+
+.sub-navigation {
+  height: 2rem;
+  background-color: variables.$secondary-color;
+}
+
+.main-navigation {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__menu {
+    flex: 1;
   }
+
+  &__logo img {
+    width: 100px;
+    height: 100px;
+  }
+
 }

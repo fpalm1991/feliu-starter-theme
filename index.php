@@ -1,39 +1,19 @@
 <?php get_header(); ?>
 
-<main>
+<main class="content-container">
 
-	<?php
+    <article>
 
-	$recent_posts = new WP_Query( [
-		'post_type' => 'post',
-		'posts_per_page' => 4
-	] );
+	    <?php while ( have_posts() ) : the_post(); ?>
 
-	?>
+            <h1 class="mb-2"><?php the_title(); ?></h1>
+            <div>
+                <?php the_content(); ?>
+            </div>
 
-    <?php if ( $recent_posts->have_posts() ) : ?>
-        <h2>Our most recent posts</h2>
-        <div class="teaser-grid">
-        <?php while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
-            <article class="teaser">
-                <div class="teaser-image">
-                    <a href="<?php the_permalink(); ?>">
-	                    <?php the_post_thumbnail( 'medium' );  ?>
-                    </a>
-                </div>
-                <div class="teaser-text">
-                    <h4><?php the_title(); ?></h4>
-                    <p><?php the_excerpt(); ?></p>
-                    <a href="<?php the_permalink(); ?>">
-                        Learn more
-                    </a>
-                </div>
-            </article>
-        <?php endwhile; ?>
-        </div>
-    <?php else : ?>
-        <p>No posts yet. Get creative! 🤯</p>
-    <?php endif; ?>
+	    <?php endwhile; ?>
+
+    </article>
 
 </main>
 

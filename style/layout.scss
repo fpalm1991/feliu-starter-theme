@@ -1,9 +1,23 @@
+@use "variables";
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.content-container {
+  margin: 0 2rem 4rem 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
 }
 
 @media (min-width: 680px) {
@@ -15,7 +29,15 @@
 
   .teaser {
     display: flex;
+    column-gap: 2.2rem;
+
+    &-image img {
+      border-radius: 8px;
+    }
   }
 }
 
-
+.main-footer {
+  min-height: 8rem;
+  background-color: variables.$secondary-color;
+}
