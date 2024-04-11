@@ -24,5 +24,18 @@
 	            ?>
             </div>
 
+            <div class="main-navigation__burger">
+                <span class="main-navigation__burger__toggle toggle--one"></span>
+                <span class="main-navigation__burger__toggle toggle--two"></span>
+                <span class="main-navigation__burger__toggle toggle--three"></span>
+            </div>
         </nav>
     </header>
+
+    <div class="main-navigation__mobile">
+	    <?php
+	    wp_nav_menu([
+		    'theme_location' => 'main_menu'
+	    ]);
+	    ?>
+    </div>
