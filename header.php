@@ -9,7 +9,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header class="mb-4">
+    <header class="mb-2">
         <nav class="navbar sub-navigation"></nav>
         <nav class="navbar main-navigation">
 

@@ -41,3 +41,19 @@
   min-height: 8rem;
   background-color: variables.$secondary-color;
 }
+
+.header-image {
+  min-height: 200px;
+  width: 100vw;
+  background-color: grey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    color: #f6f6f6;
+    font-size: 8.4rem;
+  }
+}

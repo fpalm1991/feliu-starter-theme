@@ -1,8 +1,10 @@
 <?php
 
 require __dir__ . '/lib/ThemeBuilder.php';
+require __dir__ . '/lib/Customizer.php';
 
 use feliuTheme\ThemeBuilder;
+use feliuTheme\Customizer;
 
 class FeliuStarterTheme {
 
@@ -23,6 +25,9 @@ class FeliuStarterTheme {
 
 		// Excerpt length
 		add_filter( 'excerpt_length', fn() => ThemeBuilder::get_excerpt_length() );
+
+        // Additional settings in customizer
+        new Customizer();
 	}
 
 	// Method for enqueuing scripts and styling

@@ -4,7 +4,7 @@ namespace feliuTheme;
 
 class ThemeBuilder {
 
-	private static int $excerpt_length = 20;
+	private static int $excerpt_length = 12;
 
 	public static function handle_development_mode(bool $developing = false, string $theme_version = '1.0'): int|string {
 		return $developing ? time() : $theme_version;
