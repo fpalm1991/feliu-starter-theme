@@ -18,7 +18,7 @@ $recent_posts = new WP_Query( [
 			</div>
 			<div class="teaser-text">
 				<h4><?php the_title(); ?></h4>
-				<p><?php the_excerpt(); ?></p>
+				<?php the_excerpt(); ?>
 				<a href="<?php the_permalink(); ?>">
 					Learn more
 				</a>

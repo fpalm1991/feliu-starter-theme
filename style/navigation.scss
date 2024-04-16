@@ -1,7 +1,6 @@
 @use "variables";
 
 .navbar {
-
   .menu {
     list-style: none;
     display: flex;
@@ -10,9 +9,9 @@
 
     .menu-item > a {
       text-decoration: none;
+      color: inherit;
     }
   }
-
 }
 
 .main-navigation {
@@ -86,22 +85,42 @@
       }
     }
   }
-
 }
 
 .sub-navigation {
   display: none;
 }
 
-@media (min-width: 680px) {
+.main-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.footer-navigation {
+
+  .menu {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2rem;
+  }
+}
+
+@media (min-width: 680px) {
   .sub-navigation {
-    height: 2rem;
+    display: block;
     background-color: variables.$secondary-color;
+
+    .menu {
+      justify-content: flex-end;
+      column-gap: 2rem;
+      padding-right: 2rem;
+    }
   }
 
   .main-navigation {
-
     &__menu {
       flex: 1;
       display: block;
@@ -115,9 +134,7 @@
     &__burger {
       display: none;
     }
-
   }
-
 }
 
 body.is-not-scrollable {

@@ -2,18 +2,16 @@
 
 <main class="content-container">
 
-    <article>
-
 	    <?php while ( have_posts() ) : the_post(); ?>
 
-            <h1 class="mb-2"><?php the_title(); ?></h1>
-            <div>
-                <?php the_content(); ?>
-            </div>
+            <article>
+                <h1 class="mb-2"><?php the_title(); ?></h1>
+                <div>
+                    <?php the_content(); ?>
+                </div>
+            </article>
 
 	    <?php endwhile; ?>
-
-    </article>
 
 </main>
 

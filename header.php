@@ -10,7 +10,13 @@
 <body <?php body_class(); ?>>
 
     <header class="mb-2">
-        <nav class="navbar sub-navigation"></nav>
+        <nav class="navbar sub-navigation">
+            <?php
+                wp_nav_menu( [
+                        'theme_location' => 'sub_menu',
+                ] );
+            ?>
+        </nav>
         <nav class="navbar main-navigation">
 
             <div class="main-navigation__logo">
@@ -18,9 +24,9 @@
             </div>
             <div class="main-navigation__menu">
 	            <?php
-	            wp_nav_menu([
-		            'theme_location' => 'main_menu'
-	            ]);
+                    wp_nav_menu([
+                        'theme_location' => 'main_menu'
+                    ]);
 	            ?>
             </div>
 

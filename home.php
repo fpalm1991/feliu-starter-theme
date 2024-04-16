@@ -7,13 +7,12 @@
     ?>
 
     <div class="header-image mb-4"
-         style="background-image: url('<?= $hero_image ?>'); height: <?= $hero_image_height ?>px;">
-
-        <h1><?php echo esc_html($hero_title); ?></h1>
+         style="background-image: url('<?php echo esc_url($hero_image) ?>'); height: <?php echo esc_attr($hero_image_height) ?>px;">
+        <h1><?php esc_html_e($hero_title); ?></h1>
     </div>
 
 	<main class="content-container">
-		<h2 class="mb-2">Our most recent posts</h2>
+		<h2 class="mb-2"><?php _e( "Our most recent posts" ) ?></h2>
 		<?php get_template_part( 'template-parts/content', 'teasers' ) ?>
 	</main>
 

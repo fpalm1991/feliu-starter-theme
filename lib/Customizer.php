@@ -11,6 +11,8 @@ class Customizer {
     }
 
     public function customize_register( $wp_customize ): void {
+
+        // Hero section
         $wp_customize->add_section(
             'section_hero',
             [
@@ -18,7 +20,7 @@ class Customizer {
             ]
         );
 
-        // Hero image title
+        // Hero section > Hero image title
         $wp_customize->add_setting(
             'define_hero_title',
             [
@@ -38,7 +40,7 @@ class Customizer {
             ]
         );
 
-        // Hero image
+        // Hero section > Hero image
         $wp_customize->add_setting(
             'define_hero_background_image',
             [
@@ -55,7 +57,7 @@ class Customizer {
                 ])
         );
 
-        // Hero image height
+        // Hero section > Hero image height
         $wp_customize->add_setting(
             'define_hero_image_height',
             [

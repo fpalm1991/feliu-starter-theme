@@ -1,7 +1,7 @@
 <?php
 
-require __dir__ . '/lib/ThemeBuilder.php';
-require __dir__ . '/lib/Customizer.php';
+require get_template_directory() . '/lib/ThemeBuilder.php';
+require get_template_directory() . '/lib/Customizer.php';
 
 use feliuTheme\ThemeBuilder;
 use feliuTheme\Customizer;
