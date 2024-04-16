@@ -2,7 +2,7 @@
 
 <main class="content-container">
 
-	    <?php while ( have_posts() ) : the_post(); ?>
+    <?php while ( have_posts() ) : the_post(); ?>
 
             <article>
                 <h1 class="mb-2"><?php the_title(); ?></h1>
@@ -11,7 +11,7 @@
                 </div>
             </article>
 
-	    <?php endwhile; ?>
+        <?php endwhile; ?>
 
 </main>
 

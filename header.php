@@ -20,14 +20,14 @@
         <nav class="navbar main-navigation">
 
             <div class="main-navigation__logo">
-	            <?php the_custom_logo(); ?>
+                <?php the_custom_logo(); ?>
             </div>
             <div class="main-navigation__menu">
-	            <?php
+                <?php
                     wp_nav_menu([
                         'theme_location' => 'main_menu'
                     ]);
-	            ?>
+                    ?>
             </div>
 
             <div class="main-navigation__burger">
@@ -39,9 +39,9 @@
     </header>
 
     <div class="main-navigation__mobile">
-	    <?php
-	    wp_nav_menu([
-		    'theme_location' => 'main_menu'
-	    ]);
-	    ?>
+        <?php
+        wp_nav_menu([
+                'theme_location' => 'main_menu'
+        ]);
+        ?>
     </div>
