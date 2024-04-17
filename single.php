@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-<?php if ( get_the_post_thumbnail() ) : ?>
+    <?php if ( get_the_post_thumbnail() ) : ?>
 
-    <div class="header-image mb-4"
-         style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"></div>
-<?php endif; ?>
+        <div class="header-image mb-4"
+             style="background-image: url('<?php the_post_thumbnail_url('large'); ?>')"></div>
+    <?php endif; ?>
 
     <main class="content-container">
 

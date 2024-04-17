@@ -12,7 +12,7 @@ class FeliuStarterTheme {
 
     private static string $theme_version;
 
-    public function __construct(private readonly bool $developing = false,) {
+    public function __construct(private readonly bool $developing = false) {
         // Reading theme version from style.css
         self::$theme_version = wp_get_theme()->version ?? '1.0';
 
