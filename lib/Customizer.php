@@ -20,7 +20,7 @@ class Customizer {
             ]
         );
 
-        // Hero section > Hero image title
+        // Hero section > Hero title
         $wp_customize->add_setting(
             'define_hero_title',
             [
@@ -39,6 +39,67 @@ class Customizer {
                 'type'        => 'text',
             ]
         );
+
+        // Hero section > Hero title
+        $wp_customize->add_setting(
+            'define_hero_text',
+            [
+                'type'              => 'theme_mod',
+                'default'           => __( 'Hero Text', 'feliu-starter-theme' ),
+                'sanitize_callback' => 'sanitize_textarea_field',
+            ]
+        );
+
+        $wp_customize->add_control(
+            'define_hero_text',
+            [
+                'label'       => __( 'Section Hero Text', 'feliu-starter-theme' ),
+                'description' => __( 'Hero Text', 'feliu-starter-theme' ),
+                'section'     => 'section_hero',
+                'type'        => 'textarea',
+            ]
+        );
+
+        // Hero section > Hero button text
+        $wp_customize->add_setting(
+            'define_hero_button_text',
+            array(
+                'type'              => 'theme_mod',
+                'default'           => __( 'Button', 'feliu-starter-theme' ),
+                'sanitize_callback' => 'sanitize_text_field',
+            )
+        );
+
+        $wp_customize->add_control(
+            'define_hero_button_text',
+            array(
+                'label'       => __( 'Button Text', 'feliu-starter-theme' ),
+                'description' => __( 'Text displayed on the button', 'feliu-starter-theme' ),
+                'section'     => 'section_hero',
+                'type'        => 'text',
+            )
+        );
+
+        // Hero section > Hero button link
+        $wp_customize->add_setting(
+            'define_hero_button_link',
+            array(
+                'type'              => 'theme_mod',
+                'default'           => '#',
+                'sanitize_callback' => 'esc_url_raw',
+            )
+        );
+
+        $wp_customize->add_control(
+            'define_hero_button_link',
+            array(
+                'label'       => __( 'Button Link', 'feliu-starter-theme' ),
+                'description' => __( 'URL for the button link', 'feliu-starter-theme' ),
+                'section'     => 'section_hero',
+                'type'        => 'url',
+            )
+        );
+
 
         // Hero section > Hero image
         $wp_customize->add_setting(

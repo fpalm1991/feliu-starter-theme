@@ -4,19 +4,16 @@ namespace feliuTheme;
 
 class ThemeBuilder {
 
-    private static int $excerpt_length = 12;
+    private static int $excerpt_length = 10;
+
+    public static function enqueue_scripts(bool $developing = false, string $theme_version = '1.0'): void {
+        wp_enqueue_style( 'feliu-starter-theme-main-styling', get_template_directory_uri() . '/build/style.css',
+            [], ThemeBuilder::handle_development_mode($developing, $theme_version) );
+        wp_enqueue_script('feliu-starter-theme-js', get_template_directory_uri() . '/build/main.js',);
+    }
 
     public static function handle_development_mode(bool $developing = false, string $theme_version = '1.0'): int|string {
         return $developing ? time() : $theme_version;
-    }
-
-    // Define navigation menus
-    public static function nav_menus(): array {
-        return [
-            'main_menu' => __( 'Main Menu', 'feliu-starter-theme' ),
-            'sub_menu' => __( 'Sub Menu', 'feliu-starter-theme' ),
-            'footer_menu' => __( 'Footer Menu', 'feliu-starter-theme' ),
-        ];
     }
 
     // Theme support
@@ -42,6 +39,16 @@ class ThemeBuilder {
 
     public static function get_excerpt_length(): int {
         return self::$excerpt_length;
+    }
+
+    // Remove special characters after experpt
+    public static function handle_special_characters_excerpt( string $excerpt_ending, bool $start_with_blank ): string {
+        if ( $start_with_blank ) {
+            return " " . $excerpt_ending;
+        }
+
+        return $excerpt_ending;
+
     }
 
 }

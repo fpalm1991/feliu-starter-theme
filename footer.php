@@ -1,6 +1,5 @@
 
     <footer class="main-footer">
-
         <nav class="navbar footer-navigation">
             <?php
                 wp_nav_menu( [
@@ -8,7 +7,6 @@
                 ] );
             ?>
         </nav>
-
     </footer>
 
     <?php wp_footer(); ?>
