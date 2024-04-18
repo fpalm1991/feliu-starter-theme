@@ -28,13 +28,19 @@
   align-items: center;
   padding: 0 1.2rem;
   margin-top: 2rem;
+  border: 1px solid orange;
 
   &__logo {
     z-index: 1;
 
+    .custom-logo-link {
+      display: flex;
+    }
+
     img {
       width: 120px;
       height: 120px;
+      border: 1px solid red;
     }
   }
 
@@ -165,14 +171,12 @@
           }
         }
       }
-
-
     }
   }
 
   .main-navigation {
     &__menu {
-      flex: 1;
+      // flex: 1; // Links in navigation take all available width if activated
       display: block;
 
       .menu {

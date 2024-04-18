@@ -138,13 +138,18 @@ body {
   align-items: center;
   padding: 0 1.2rem;
   margin-top: 2rem;
+  border: 1px solid orange;
 }
 .main-navigation__logo {
   z-index: 1;
 }
+.main-navigation__logo .custom-logo-link {
+  display: flex;
+}
 .main-navigation__logo img {
   width: 120px;
   height: 120px;
+  border: 1px solid red;
 }
 .main-navigation__menu {
   display: none;
@@ -247,7 +252,6 @@ body {
     padding: 0 1rem;
   }
   .main-navigation__menu {
-    flex: 1;
     display: block;
   }
   .main-navigation__menu .menu .menu-item:hover {
