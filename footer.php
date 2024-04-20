@@ -2,9 +2,11 @@
     <footer class="main-footer">
         <nav class="navbar footer-navigation">
             <?php
-                wp_nav_menu( [
+                if ( has_nav_menu( 'footer_menu' ) ) {
+                    wp_nav_menu( [
                         'theme_location' => 'footer_menu',
-                ] );
+                    ] );
+                }
             ?>
         </nav>
     </footer>

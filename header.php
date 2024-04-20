@@ -12,9 +12,11 @@
     <header class="mb-2">
         <nav class="navbar sub-navigation">
             <?php
-                wp_nav_menu( [
+                if ( has_nav_menu( 'sub_menu') ) {
+                    wp_nav_menu( [
                         'theme_location' => 'sub_menu',
-                ] );
+                    ]);
+                }
             ?>
         </nav>
         <nav class="navbar main-navigation">
@@ -24,10 +26,12 @@
             </div>
             <div class="main-navigation__menu">
                 <?php
-                    wp_nav_menu([
-                        'theme_location' => 'main_menu'
-                    ]);
-                    ?>
+                    if ( has_nav_menu( 'main_menu' ) ) {
+                        wp_nav_menu([
+                            'theme_location' => 'main_menu'
+                        ]);
+                    }
+                ?>
             </div>
 
             <div class="main-navigation__burger">
@@ -40,8 +44,10 @@
 
     <div class="main-navigation__mobile">
         <?php
-        wp_nav_menu([
-                'theme_location' => 'main_menu'
-        ]);
+            if ( has_nav_menu( 'main_menu' ) ) {
+                wp_nav_menu([
+                    'theme_location' => 'main_menu'
+                ]);
+            }
         ?>
     </div>
