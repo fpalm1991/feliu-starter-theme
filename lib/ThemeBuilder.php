@@ -41,14 +41,13 @@ class ThemeBuilder {
         return self::$excerpt_length;
     }
 
-    // Remove special characters after experpt
+    // Remove special characters after excerpt
     public static function handle_special_characters_excerpt( string $excerpt_ending, bool $start_with_blank ): string {
         if ( $start_with_blank ) {
             return " " . $excerpt_ending;
         }
 
         return $excerpt_ending;
-
     }
 
 }
