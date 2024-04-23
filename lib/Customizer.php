@@ -2,6 +2,8 @@
 
 namespace feliuTheme;
 
+use WP_Customize_Color_Control;
+use WP_Customize_Control;
 use WP_Customize_Media_Control;
 
 class Customizer {
@@ -100,7 +102,6 @@ class Customizer {
             )
         );
 
-
         // Hero section > Hero image
         $wp_customize->add_setting(
             'define_hero_background_image',
@@ -117,6 +118,46 @@ class Customizer {
                     'mime_type'    => 'image',
                 ])
         );
+
+        // Hero section > Activate hero image overlay
+        $wp_customize->add_setting(
+            'activate_header_image_overlay',
+            [
+                'type'              => 'theme_mod',
+                'default'           => false,
+                'sanitize_callback' => 'rest_sanitize_boolean',
+            ]
+        );
+
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+                'activate_header_image_overlay',
+                array(
+                    'label'     => __('Activate overlay over header image', 'feliu-starter-theme'),
+                    'section'   => 'section_hero',
+                    'settings'  => 'activate_header_image_overlay',
+                    'type'      => 'checkbox',
+                )
+            )
+        );
+
+        // Hero section > Option for color overlay over hero image
+        $wp_customize->add_setting(
+            'define_overlay_color',
+            [
+                'default' => '#ffffff',
+                'sanitize_callback' => 'sanitize_hex_color',
+            ]
+        );
+
+        // Add Controls
+        $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'define_overlay_color_control', [
+            'label' => __( 'Overlay Color', 'feliu-starter-theme' ),
+            'section' => 'section_hero',
+            'settings' => 'define_overlay_color'
+        ]
+        ));
 
         // Hero section > Hero image height
         $wp_customize->add_setting(

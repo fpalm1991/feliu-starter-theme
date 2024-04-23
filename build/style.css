@@ -82,9 +82,9 @@ body {
 
 .header-image {
   min-height: 200px;
-  background-color: grey;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: grey !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
