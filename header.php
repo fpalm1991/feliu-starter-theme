@@ -9,45 +9,45 @@
 </head>
 <body <?php body_class(); ?>>
 
-    <header class="mb-2">
-        <nav class="navbar sub-navigation">
-            <?php
-                if ( has_nav_menu( 'sub_menu') ) {
-                    wp_nav_menu( [
-                        'theme_location' => 'sub_menu',
-                    ]);
-                }
-            ?>
-        </nav>
-        <nav class="navbar main-navigation">
-
-            <div class="main-navigation__logo">
-                <?php the_custom_logo(); ?>
-            </div>
-            <div class="main-navigation__menu">
-                <?php
-                    if ( has_nav_menu( 'main_menu' ) ) {
-                        wp_nav_menu([
-                            'theme_location' => 'main_menu'
-                        ]);
-                    }
-                ?>
-            </div>
-
-            <div class="main-navigation__burger">
-                <span class="main-navigation__burger__toggle toggle--one"></span>
-                <span class="main-navigation__burger__toggle toggle--two"></span>
-                <span class="main-navigation__burger__toggle toggle--three"></span>
-            </div>
-        </nav>
-    </header>
-
-    <div class="main-navigation__mobile">
+<header class="mb-2">
+    <nav class="navbar sub-navigation">
         <?php
-            if ( has_nav_menu( 'main_menu' ) ) {
-                wp_nav_menu([
-                    'theme_location' => 'main_menu'
+            if ( has_nav_menu( 'sub_menu') ) {
+                wp_nav_menu( [
+                    'theme_location' => 'sub_menu',
                 ]);
             }
         ?>
-    </div>
+    </nav>
+    <nav class="navbar main-navigation">
+
+        <div class="main-navigation__logo">
+            <?php the_custom_logo(); ?>
+        </div>
+        <div class="main-navigation__menu">
+            <?php
+                if ( has_nav_menu( 'main_menu' ) ) {
+                    wp_nav_menu([
+                        'theme_location' => 'main_menu'
+                    ]);
+                }
+            ?>
+        </div>
+
+        <div class="main-navigation__burger">
+            <span class="main-navigation__burger__toggle toggle--one"></span>
+            <span class="main-navigation__burger__toggle toggle--two"></span>
+            <span class="main-navigation__burger__toggle toggle--three"></span>
+        </div>
+    </nav>
+</header>
+
+<div class="main-navigation__mobile">
+    <?php
+        if ( has_nav_menu( 'main_menu' ) ) {
+            wp_nav_menu([
+                'theme_location' => 'main_menu'
+            ]);
+        }
+    ?>
+</div>

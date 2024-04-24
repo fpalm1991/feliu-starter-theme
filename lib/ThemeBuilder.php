@@ -27,14 +27,14 @@ class ThemeBuilder {
             'caption',
             'style',
             'script'
-        ] );
+        ]);
         add_theme_support( 'title-tag' );
         add_theme_support( 'custom-logo', [
-            'width'      => 200,
-            'height'     => 200,
-            'flex-height' => true,
-            'flex-width'  => true,
-        ] );
+            'width'         => 200,
+            'height'        => 200,
+            'flex-height'   => true,
+            'flex-width'    => true,
+        ]);
     }
 
     public static function get_excerpt_length(): int {

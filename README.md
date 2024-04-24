@@ -15,8 +15,8 @@ This theme is designed to provide a very basic yet functional foundation for qui
 
 1. **Installation**:
     - Download or clone the theme into your WordPress themes directory (`wp-content/themes/`).
-    - Create 3 Menus: Main Menu, Footer Menu, Sub Menu.
     - Activate the theme via the WordPress dashboard.
+    - Create 3 Menus: Main Menu, Footer Menu, Sub Menu.
 
 2. **Customization**:
     - Modify template files and stylesheets as needed to tailor the design to your preferences.

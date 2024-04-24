@@ -12,6 +12,10 @@ body {
   overscroll-behavior-y: none;
 }
 
+.teaser-container {
+  margin: 0 2rem 4rem 2rem;
+}
+
 .content-container {
   margin: 0 2rem 4rem 2rem;
 
@@ -55,6 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+
     p {
       margin-bottom: 0;
     }
@@ -126,5 +131,10 @@ body {
       width: auto;
       height: auto;
     }
+  }
+
+  .content-container {
+    max-width: 920px;
+    margin: 0 auto;
   }
 }

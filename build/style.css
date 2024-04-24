@@ -10,6 +10,10 @@ body {
   overscroll-behavior-y: none;
 }
 
+.teaser-container {
+  margin: 0 2rem 4rem 2rem;
+}
+
 .content-container {
   margin: 0 2rem 4rem 2rem;
 }
@@ -113,6 +117,10 @@ body {
   .teaser-image img {
     width: auto;
     height: auto;
+  }
+  .content-container {
+    max-width: 920px;
+    margin: 0 auto;
   }
 }
 .navbar .menu {
@@ -292,6 +300,10 @@ body {
   margin: 0;
   height: 100%;
   overflow: hidden;
+}
+
+.debug-border {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=style.css.map */
