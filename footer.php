@@ -1,5 +1,5 @@
 
-    <footer class="main-footer">
+    <footer class="main-footer footer-area">
         <nav class="navbar footer-navigation">
             <?php
                 if ( has_nav_menu( 'footer_menu' ) ) {

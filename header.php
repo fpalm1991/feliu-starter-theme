@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( 'grid-main-layout' ); ?>>
 
-<header class="mb-2">
+<header class="mb-2 header-area">
     <nav class="navbar sub-navigation">
         <?php
             if ( has_nav_menu( 'sub_menu') ) {
