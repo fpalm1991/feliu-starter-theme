@@ -2,7 +2,7 @@
 
 namespace feliuTheme;
 
-class HeroImage {
+class HomeHeroImage {
 
     public static function get_hero_image(): string|bool {
         return wp_get_attachment_url(get_theme_mod( 'define_hero_background_image' ));

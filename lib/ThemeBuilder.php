@@ -28,6 +28,7 @@ class ThemeBuilder {
             'style',
             'script'
         ]);
+        add_theme_support( 'align-wide' ); // Allows images to be defined to take full width
         add_theme_support( 'title-tag' );
         add_theme_support( 'custom-logo', [
             'width'         => 200,
