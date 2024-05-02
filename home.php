@@ -30,7 +30,6 @@
         </div>
 
         <main class="teaser-container">
-            <h2 class="mb-2"><?php _e( "Our most recent posts" ) ?></h2>
             <?php get_template_part( 'template-parts/content', 'teasers' ) ?>
         </main>
     </div>
