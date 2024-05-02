@@ -315,7 +315,7 @@ body {
 }
 
 @media (min-width: 680px) {
-  h1 {
+  .header-image h1 {
     font-size: 4.4rem;
   }
 }

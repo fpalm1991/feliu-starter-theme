@@ -38,4 +38,4 @@ class FeliuStarterTheme {
 }
 
 // While developing, set bool developing to true for disabling caching of browser.
-$feliu_theme = new FeliuStarterTheme( developing: true );
+$feliu_theme = new FeliuStarterTheme( developing: false );
