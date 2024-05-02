@@ -54,10 +54,18 @@
     }
   }
 
-  &-image img {
+  &-image {
+    height: 100%;
     width: 100%;
-    height: auto;
     border-radius: 8px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &-image-link {
+    width: 100%;
+    height: 100%;
   }
 }
 

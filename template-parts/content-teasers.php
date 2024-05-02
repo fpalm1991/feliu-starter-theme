@@ -11,11 +11,9 @@ $recent_posts = new WP_Query( [
 <div class="teaser-grid">
     <?php while ( $recent_posts->have_posts() ) : $recent_posts->the_post(); ?>
         <article class="teaser">
-            <div class="teaser-image">
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail( 'medium' );  ?>
-                </a>
-            </div>
+            <a class="teaser-image-link" href="<?php the_permalink(); ?>">
+                <div class="teaser-image debug-border" style="background-image: url(<?php the_post_thumbnail_url() ?>)"></div>
+            </a>
             <div class="teaser-text">
                 <div class="teaser-text__text">
                     <h4><?php the_title(); ?></h4>

@@ -274,10 +274,17 @@ body.is-not-scrollable .main-navigation__burger {
   margin-left: 5px;
   vertical-align: middle;
 }
-.teaser-image img {
+.teaser-image {
+  height: 100%;
   width: 100%;
-  height: auto;
   border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.teaser-image-link {
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 1280px) {
