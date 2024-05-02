@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main class="content-container text-container main-area">
+<main class="text-container main-area">
     <?php while ( have_posts() ) : the_post(); ?>
         <article>
             <h1 class="mb-2"><?php the_title(); ?></h1>

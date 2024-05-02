@@ -3,3 +3,26 @@ body {
     font-size: 1.2em;
     line-height: 1.8;
 }
+
+.content-container {
+    p {
+        margin-bottom: 2rem;
+    }
+}
+
+.header-image {
+    h1 {
+        color: inherit;
+        font-size: 3.8rem;
+    }
+
+    p {
+        color: inherit;
+    }
+}
+
+@media (min-width: 680px) {
+    h1 {
+        font-size: 4.4rem;
+    }
+}
