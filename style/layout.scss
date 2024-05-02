@@ -132,19 +132,13 @@ body {
   }
 
   .content-container {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p {
-      max-width: 920px;
-      margin: 0 auto;
-    }
-
     p {
       margin-bottom: 4rem;
     }
+  }
+
+  .text-container {
+    max-width: 920px;
+    margin: 0 auto;
   }
 }

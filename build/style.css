@@ -115,18 +115,12 @@ body {
     width: auto;
     height: auto;
   }
-  .content-container h1,
-  .content-container h2,
-  .content-container h3,
-  .content-container h4,
-  .content-container h5,
-  .content-container h6,
-  .content-container p {
-    max-width: 920px;
-    margin: 0 auto;
-  }
   .content-container p {
     margin-bottom: 4rem;
+  }
+  .text-container {
+    max-width: 920px;
+    margin: 0 auto;
   }
 }
 .grid-main-layout {
